@@ -1,169 +1,143 @@
 # Codeforces Competition Archive
 
-Welcome to my **Codeforces Competition Archive**!  
-This repository is a personal collection of my competitive programming submissions on [Codeforces](https://codeforces.com), organized by contest and problem. It's intended to serve as a personal resource, a learning reference, and a record of my progress over time.
+Welcome to my Codeforces Competition Archive!  
+This repository is a personal collection of my solutions from Codeforces contests. It serves as both a historical record of my competitive programming journey and a practical resource where I can track, reflect, and improve upon my problem-solving skills.
 
-Whether you're a fellow programmer looking for solutions, templates, or ideas — or just browsing — feel free to explore!
-
----
-
-## 📚 Table of Contents
-
-- [Purpose](#-purpose)
-- [Repository Structure](#-repository-structure)
-- [Getting Started](#-getting-started)
-- [My Coding Setup](#-my-coding-setup)
-- [Templates](#-templates)
-- [Naming Convention](#-naming-convention)
-- [How I Use This Repo](#-how-i-use-this-repo)
-- [Codeforces Profile](#-codeforces-profile)
-- [License](#-license)
-- [Contributing](#-contributing)
-- [Acknowledgements](#-acknowledgements)
+Whether you're browsing for inspiration, checking out how I solve problems, or looking to start your own archive, I hope this repository helps in some way. Let's dive in.
 
 ---
 
-## 🎯 Purpose
+## 🚀 Purpose
 
-This repository is built for three main reasons:
+The main reason I created this repository is to **organize my Codeforces submissions** in a meaningful way. During competitions, it's easy to get lost in the fast pace of solving problems, submitting, debugging, and moving on. Afterward, many programmers (myself included) forget to revisit those problems.
 
-1. **Tracking Progress**: A historical record of my Codeforces contests and how I performed.
-2. **Reusability**: Storing useful snippets and templates I use regularly during competitions.
-3. **Learning Resource**: Reviewing past problems and my solutions helps reinforce algorithmic concepts and identify areas for improvement.
+This repository aims to solve that problem by:
+- **Keeping track** of every contest I've participated in
+- **Saving solutions** in an organized directory structure
+- **Allowing easy review** of problems I struggled with
+- **Improving long-term retention** of algorithms and patterns
 
----
-
-## 🗂 Repository Structure
-
-codeforces-competition-archive/ │ ├── templates/ # Pre-written boilerplate code and snippets ├── contests/ │ ├── 1900/ │ │ ├── A.cpp # Problem A from Contest 1900 │ │ ├── B.cpp # Problem B │ │ └── ... │ ├── 1901/ │ │ └── ... │ └── ... ├── notes/ # Explanations, learning summaries, post-contest analysis ├── tools/ # Scripts or helpers (e.g., auto-submission tools, scraper) ├── README.md └── .gitignore
-
-yaml
-Copy
-Edit
-
-Each contest is stored in a folder named after the contest number. Problems are named according to the official problem ID (A, B, C, etc).
+It's also useful as a personal backup in case something happens to my local files or online accounts.
 
 ---
 
-## 🚀 Getting Started
+## 📁 Repository Structure
 
-To clone this repo and get started with your own archive:
+The organization of the repository is simple and scalable:
 
-```bash
-git clone https://github.com/yourusername/codeforces-competition-archive.git
-cd codeforces-competition-archive
-You can start by adding a new folder under contests/ for your next competition and placing your .cpp or .py files inside.
+codeforces-competition-archive/ │ ├── contests/ │ ├── 1900/ │ │ ├── A.cpp │ │ ├── B.cpp │ │ ├── C.cpp │ │ └── ... │ ├── 1901/ │ │ └── ... │ └── ... │ ├── templates/ │ └── template.cpp # Base C++ template with useful macros │ ├── notes/ │ ├── 1900_notes.md # Contest analysis, postmortems, or lessons │ └── general_tips.md │ └── README.md
 
-💻 My Coding Setup
-I use the following setup for contests:
 
-Language: C++17 (GCC)
+- `contests/`: Contains a folder for each Codeforces contest I’ve participated in. Each folder has individual `.cpp` files named according to the problem label (A, B, C, etc).
+- `templates/`: Reusable snippets, utility functions, and competitive programming templates.
+- `notes/`: Optional notes for reflection, explanations of problems, and reminders to myself.
+- `README.md`: This file you're reading now.
 
-Editor: VSCode with competitive programming extensions
+---
 
-Compiler Flags: -std=c++17 -O2 -Wall
+## 🧠 How I Use This Repo
 
-Execution: I use a custom script to compile and run test cases quickly
+Here’s a general workflow I follow using this repository:
 
-Online Judge Tools: cf-tool for downloading problems and submitting from the terminal
+### Before the Contest
+- Prepare the `contests/` directory with the new contest number.
+- Make sure my template is updated and copied over for easy access.
+- Launch my editor (usually VS Code) and terminal with everything set.
 
-🔁 Templates
-You’ll find my templates under the templates/ directory. They include:
+### During the Contest
+- Write code as I solve each problem.
+- Save files like `A.cpp`, `B.cpp`, etc., within the contest directory.
+- Test locally using input/output redirection or a custom checker script.
 
-Fast I/O template
+### After the Contest
+- Add notes about the contest: what went well, what didn’t, what I learned.
+- Review problems I failed or skipped, and add editorial links or personal solutions later.
+- Push the entire folder to GitHub with a descriptive commit message.
 
-Segment Tree & BIT
+This workflow helps build a discipline of reflection and organization — two very underrated skills in competitive programming.
 
-Graph algorithms (BFS, DFS, Dijkstra)
+---
 
-DSU / Union-Find
+## 🔧 My Setup
 
-Modular arithmetic
+Here’s a quick overview of the tools and environment I use for competitive programming on Codeforces:
 
-Combinatorics (nCr, factorials with mod)
+- **Language**: C++17 or C++20 (depending on support)
+- **Editor**: Visual Studio Code with snippets and auto-run tasks
+- **Compiler**: `g++` with flags: `-std=c++17 -O2 -Wall -Wextra`
+- **Testing**: Simple bash scripts for input/output file testing
+- **Tools**:
+  - [`cf-tool`](https://github.com/xalanq/cf-tool): Download and submit problems via terminal
+  - [`Competitive Companion`](https://github.com/jmerle/competitive-companion): Browser extension to quickly fetch problems
 
-I load the templates into my problems as needed using a snippet plugin in VSCode.
+I also keep a `template.cpp` file that includes macros, type aliases, fast I/O, and common functions like binary exponentiation or sieve of Eratosthenes.
 
-Example:
+---
 
-cpp
-Copy
-Edit
-#include <bits/stdc++.h>
-using namespace std;
-#define int long long
-#define all(x) x.begin(), x.end()
-const int INF = 1e18;
-const int MOD = 1e9 + 7;
+## 🧰 Templates
 
-// Example template snippet
-int mod_pow(int a, int b, int m = MOD) {
-    int res = 1;
-    while (b > 0) {
-        if (b % 2) res = res * a % m;
-        a = a * a % m;
-        b /= 2;
-    }
-    return res;
-}
-🧾 Naming Convention
-To keep everything organized and searchable:
+Templates are key to saving time and reducing stress during fast-paced contests. My `template.cpp` includes:
 
-Each file is named after its contest and problem (e.g., 1900A.cpp)
+- Fast input/output
+- Macros like `#define int long long` (when needed)
+- Utility functions: `gcd`, `lcm`, `mod_pow`, etc.
+- Pre-written data structures: `DSU`, `Segment Tree`, etc.
+- Graph algorithms: `BFS`, `DFS`, `Dijkstra`, `Topological Sort`
 
-Post-contest updates include an analysis comment block at the top of each file
+I try not to over-rely on templates during practice to improve memory and understanding, but during rated contests, they’re a huge help.
 
-Files use snake_case or kebab-case only for scripts, camelCase for code where appropriate
+---
 
-🔍 How I Use This Repo
-Before a Contest:
+## 📌 Naming Conventions
 
-Pull latest changes and update templates if needed.
+To maintain consistency, I use the following rules:
 
-Prepare the directory for the new contest under contests/.
+- Each contest has its own numbered folder (e.g., `1900/`, `1901/`)
+- Each problem inside is saved using its label: `A.cpp`, `B.cpp`, etc.
+- If I revisit or improve a solution later, I may add a suffix like `B_alt.cpp` or `B_explained.cpp`
+- Notes are saved as `1900_notes.md` or named according to themes (e.g., `binary_search_notes.md`)
 
-During a Contest:
+This makes navigation quick and prevents clutter over time.
 
-Write and save problem solutions in the corresponding folder.
+---
 
-Use local testing setup or Codeforces IDE.
+## 📈 Goals
 
-After a Contest:
+Aside from organizing my submissions, this repository helps me focus on improvement through habit:
 
-Add notes in the notes/ folder with strategy breakdown and mistakes.
+- Review wrong answers after contests
+- Annotate files with what went wrong
+- Track patterns of mistakes (off-by-one, wrong base case, time limit, etc.)
+- Create a custom “error log” in the notes folder
 
-Push changes to the GitHub repo with commit message:
-"Add solutions for CF Round #XXXX"
+My long-term goal is to raise my Codeforces rating and become a more confident problem solver in contests and real-world scenarios alike.
 
-Review Later:
+---
 
-Revisit failed problems, re-implement, or try alternative solutions.
+## 🌐 My Codeforces Profile
 
-Add editorial links and personal explanations.
+You can find my contest history, rating, and submissions on my official Codeforces profile:
 
-🌐 Codeforces Profile
-📎 You can view my contest participation and problem-solving history on my Codeforces profile:
-→ Click here to visit
-(replace YOUR_USERNAME with your actual handle)
+🔗 [https://codeforces.com/profile/YOUR_USERNAME](https://codeforces.com/profile/YOUR_USERNAME)  
+_(Replace `YOUR_USERNAME` with your actual handle.)_
 
-📜 License
-This repository is licensed under the MIT License.
-You're free to use the code and templates, but please give credit where due.
+Feel free to check out the problems I’ve solved there if you're interested in comparing approaches or learning from different solutions.
 
-🤝 Contributing
-This is primarily a personal archive, but if you're interested in:
+---
 
-Adding new templates
+## 📜 License
 
-Improving structure
+This project is open-source under the **MIT License**. You’re welcome to clone, fork, or use the structure and templates for your own competitive programming workflow.  
+If you do, a credit or star is always appreciated but not required!
 
-Creating tooling/scripts
+---
 
-…then feel free to fork and open a pull request!
+## 🧠 Final Thoughts
 
-🙌 Acknowledgements
-Huge thanks to the Codeforces community for continuous learning opportunities.
+Competitive programming is not just about solving problems — it’s about building habits: consistency, pattern recognition, efficiency under pressure, and structured thinking.
 
-Shoutout to cp-algorithms.com for fantastic algorithm references.
+This repository is more than just a folder of code. It’s a timeline of learning. Some problems will have messy solutions, and some might be overkill. Some might be wrong — and that’s okay. What matters is using this as a space to get better over time.
 
-Inspired by other CP repositories like those by Errichto, SecondThread, and the_hyp0cr1t3.
+If you’ve made it this far — thanks for reading, and I hope you found something useful here.
+
+Happy coding and see you on the leaderboard! 🚀
